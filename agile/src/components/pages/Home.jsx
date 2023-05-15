@@ -48,7 +48,7 @@ const Home = () => {
   }, []);
 
   async function fetchData() {
-    const res = await fetch('http://localhost:8000/data');
+    const res = await fetch('https://cms-server-29mo.onrender.com/data');
     const parsedData = await res.json();
     setData(parsedData);
   }
