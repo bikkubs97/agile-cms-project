@@ -5,7 +5,7 @@ export default () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch("https://cms-server-29mo.onrender.com")
+    fetch("https://cms-server-29mo.onrender.com/contact")
       .then(response => response.json())
       .then(data => setMessages(data))
       .catch(error => console.error(error));
