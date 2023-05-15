@@ -49,7 +49,7 @@
     "react-router-hash-link": "^2.3.1",
     "react-scripts": "3.4.3",
     "react-transition-group": "^4.4.1",
-    "sass": "^1.62.1",
+    "sass": "1.34.0",
     "sass-loader": "^13.2.2",
     "simplebar-react": "^2.3.0"
   },

@@ -1,3 +1,5 @@
+
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -341,26 +343,30 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
+
+
+
 $spacer: 1rem;
 $spacers: (
   0: 0,
-1: $spacer / 4,
-  2: $spacer / 2,
+  1: calc(#{$spacer} / 4),
+  2: calc(#{$spacer} / 2),
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: ($spacer * 5),
-  7: ($spacer * 8),
-  8: ($spacer * 10),
-  9: ($spacer * 11),
-  10: ($spacer * 14),
-  11: ($spacer * 16),
-  12: ($spacer * 20),
-  'sm': ($spacer * 1),
-  'md': ($spacer * 2),
-  'lg': ($spacer * 4),
-  'xl': ($spacer * 8)
+  4: calc(#{$spacer} * 1.5),
+  5: calc(#{$spacer} * 3),
+  6: calc(#{$spacer} * 5),
+  7: calc(#{$spacer} * 8),
+  8: calc(#{$spacer} * 10),
+  9: calc(#{$spacer} * 11),
+  10: calc(#{$spacer} * 14),
+  11: calc(#{$spacer} * 16),
+  12: calc(#{$spacer} * 20),
+  'sm': $spacer,
+  'md': calc(#{$spacer} * 2),
+  'lg': calc(#{$spacer} * 4),
+  'xl': calc(#{$spacer} * 8)
 );
+
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
 
@@ -463,7 +469,7 @@ $border-radius-md:            .2rem;
 $border-radius-sm:            .1rem;
 $border-radius-pill:           2rem;
 $circle-radius:                50%;
-$organic-radius:               63% 37% 30% 70% / 50% 45% 55% 50%;
+
 
 $component-active-color:        $white;
 $component-active-bg:           $primary;
@@ -558,7 +564,7 @@ $h4-font-size:                $font-size-base * 1.5;
 $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 
-$headings-margin-bottom:      $spacer / 2;
+$headings-margin-bottom:      $spacer;
 $headings-font-family:        null;
 $headings-font-style:         null;
 $headings-font-weight:        $font-weight-bold;
@@ -820,7 +826,7 @@ $input-height-border:                   $input-border-width * 2;
 
 $input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2);
 $input-height-inner-half:               add($input-line-height * .5em, $input-padding-y);
-$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y / 2);
+$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y);
 
 $input-height:                          add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false));
 $input-height-sm:                       add($input-line-height * 1em, add($input-padding-y-sm * 2, $input-height-border, false));
@@ -1202,7 +1208,7 @@ $dropdown-border-radius:            $border-radius;
 $dropdown-border-width:             $border-width;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width);
 $dropdown-divider-bg:               $gray-200;
-$dropdown-divider-margin-y:         $spacer / 2;
+$dropdown-divider-margin-y:         $spacer;
 $dropdown-box-shadow:               $box-shadow;
 
 $dropdown-link-color:               $gray-900;
@@ -1214,7 +1220,7 @@ $dropdown-link-active-bg:           $gray-400;
 
 $dropdown-link-disabled-color:      $gray-600;
 
-$dropdown-item-padding-y:           $spacer / 4;
+$dropdown-item-padding-y:           $spacer;
 $dropdown-item-padding-x:           $spacer;
 
 $dropdown-header-color:             $gray-900;
@@ -1274,7 +1280,7 @@ $card-bg:                           $white;
 
 $card-img-overlay-padding:          $spacer;
 
-$card-group-margin:                 $grid-gutter-width / 2;
+$card-group-margin:                 $grid-gutter-width;
 $transition-bezier-card:            cubic-bezier(0.34, 1.45, 0.7, 1);
 
 //Timelines
@@ -1485,7 +1491,7 @@ $list-group-border-radius:          $border-radius;
 $list-group-sm-item-padding-y:      .625rem;
 $list-group-sm-item-padding-x:      .875rem;
 
-$list-group-item-padding-y:         $spacer / 2;
+$list-group-item-padding-y:         $spacer;
 $list-group-item-padding-x:         $spacer;
 $list-group-item-bg-level:          -9;
 $list-group-item-color-level:       6;
@@ -1524,7 +1530,7 @@ $figure-caption-color:              $gray-600;
 // Breadcrumbs
 
 $breadcrumb-font-size:              null;
-$breadcrumb-padding-y:              $spacer / 2;
+$breadcrumb-padding-y:              $spacer;
 $breadcrumb-padding-x:              $spacer;
 $breadcrumb-item-padding-x:         .5rem;
 $breadcrumb-margin-bottom:          1rem;
