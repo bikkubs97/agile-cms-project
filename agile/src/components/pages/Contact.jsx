@@ -31,7 +31,7 @@ const Contact = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8000/contact', {
+      const response = await fetch('https://cms-server-29mo.onrender.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
