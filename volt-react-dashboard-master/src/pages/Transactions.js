@@ -3,17 +3,15 @@ import { Col, Row } from '@themesberg/react-bootstrap';
 
 export default () => {
   const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState("Loading messages, Please Wait!");
+  const [loading, setLoading] = useState("Loading Messages, Please Wait....");
+
   useEffect(() => {
     fetch("https://cms-server-29mo.onrender.com/contact")
       .then(response => response.json())
       .then(data => setMessages(data))
-      .then(data => setLoading(""))
+      .then(()=>setLoading(""))
       .catch(error => console.error(error));
   }, []);
-
-
-
 
   return (
     <>
@@ -45,3 +43,4 @@ export default () => {
       </Row>
     </>
   );
+};
