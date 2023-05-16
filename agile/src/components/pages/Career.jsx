@@ -180,7 +180,7 @@ const handleNextClick = () => {
   console.log("clicked next");
   console.log("before test = " + test);
 
-  if (test === 4) {  // Corrected condition
+  if (test === 5) {  // Corrected condition
     setTest(1);
   } else {
     setTest(prev => prev + 1);
@@ -378,9 +378,9 @@ const handleNextClick = () => {
           coverflowEffect={{
             rotate: 25,
             stretch: -50,
-            depth: 500,
-            modifier: 1,
-            slideShadows: true
+            depth: 200,
+            modifier: 1.6,
+            slideShadows: false
           }}
           loop={true}
           slidesPerView={4}
