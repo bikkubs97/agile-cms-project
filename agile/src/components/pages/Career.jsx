@@ -91,7 +91,7 @@ const Career = () => {
     {
       id: 1,
       title: "atest 1",
-      disc: ' 2 culpa obcaeceritatis minus nihil atque quae veritatis minus nih'
+      disc: ' first comment'
     },
   ]
 
@@ -99,7 +99,7 @@ const Career = () => {
     {
       id: 1,
       title: "atest 2",
-      disc: ' 2 culpa obcaeceritatis minus nihil atque quae veritatis minus nih'
+      disc: 'second comment'
     },
   ]
 
@@ -107,14 +107,14 @@ const Career = () => {
     {
       id: 1,
       title: "atest 3",
-      disc: ' 2 culpa obcaeceritatis minus nihil atque quae veritatis minus nih'
+      disc: ' Third Comment'
     },
   ]
   const comment4 = [
     {
       id: 1,
       title: "atest 4",
-      disc: ' 2 culpa obcaeceritatis minus nihil atque quae veritatis minus nih'
+      disc: '4th comment'
     },
   ]
 
@@ -122,7 +122,7 @@ const Career = () => {
     {
       id: 1,
       title: "atest 5",
-      disc: ' 2 culpa obcaeceritatis minus nihil atque quae veritatis minus nih'
+      disc: ' 5th comment'
     },
   ]
 
@@ -144,63 +144,51 @@ const Career = () => {
 
 
   const [comment, setComment] = useState(comment3)
+const [test, setTest] = useState(3)
 
+useEffect(() => {
+  if (test === 1) {
+    setComment(comment1)
+    console.log("1")
+  } else if (test === 2) {
+    setComment(comment2)
+    console.log("2")
+  } else if (test === 3) {
+    setComment(comment3)
+    console.log("3")
+  } else if (test === 4) {
+    setComment(comment4)
+    console.log("4")
+  } else if (test === 5) {
+    setComment(comment5)
+    console.log("5")
+  }
+}, [test]);
 
-  const [test, setTest] = useState(3)
+const handlePrevClick = () => {
+  console.log("clicked previous")
+  console.log("before test = " + test)
 
-  useEffect(() => {
+  if (test === 1) {
+    setTest(5)
+  } else {
+    setTest(prev => prev - 1)
+  }
+}
 
+const handleNextClick = () => {
+  console.log("clicked next");
+  console.log("before test = " + test);
 
-    if (test === 1) {
-      setComment(comment1)
-      console.log("1")
-
-    } else if (test === 2) {
-      setComment(comment2)
-      console.log("2")
-
-    }
-    else if (test === 3) {
-      setComment(comment3)
-      console.log("3")
-
-    }
-    else if (test === 4) {
-      setComment(comment4)
-      console.log("4")
-
-    } else if (test === 5) {
-      setComment(comment5)
-      console.log("4")
-
-    }
-
-  }, [test]);
-
-  const handlePrevClick = () => {
-    console.log("clicked previous")
-    console.log("bf test = " + test)
-    if (test == 1) {
-      setTest(5)
-    } else {
-      setTest(prev => prev - 1)
-    }
-
-    console.log("after test = " + test)
+  if (test === 4) {  // Corrected condition
+    setTest(1);
+  } else {
+    setTest(prev => prev + 1);
   }
 
+  console.log("after test = " + test);
+};
 
-  const handleNextClick = () => {
-    console.log("clicked previous")
-    console.log("bf test = " + test)
-    if (test == 1) {
-      setTest(5)
-    } else {
-      setTest(prev => prev - 1)
-    }
-
-    console.log("after test = " + test)
-  }
 
 
 
@@ -390,9 +378,9 @@ const Career = () => {
           coverflowEffect={{
             rotate: 25,
             stretch: -50,
-            depth: 200,
-            modifier: 1.6,
-            slideShadows: false
+            depth: 500,
+            modifier: 1,
+            slideShadows: true
           }}
           loop={true}
           slidesPerView={4}
@@ -431,22 +419,19 @@ const Career = () => {
           }}
 
         >
-          <SwiperSlide className='slide-style'> <CareerImgCard></CareerImgCard> </SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-          <SwiperSlide className='slide-style'><CareerImgCard></CareerImgCard></SwiperSlide>
-        
-          
-
-
+         
+          <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /></SwiperSlide>
+          <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /></SwiperSlide>
+         <SwiperSlide className='slide-style'> <img className='my-img' src="https://plus.unsplash.com/premium_photo-1666625102569-d55445ecf811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" /></SwiperSlide>
+          <SwiperSlide className='slide-style'> <img className='my-img' src="https://plus.unsplash.com/premium_photo-1666625102452-33a2a0fc62d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" />
+          </SwiperSlide>
+          <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="" /></SwiperSlide>
+         
           <div className="slider-controler">
             <div onClick={handlePrevClick} className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>
-            <div className="swiper-button-next slider-arrow">
+            <div onClick={handleNextClick}className="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
             <div className="swiper-pagination"></div>
