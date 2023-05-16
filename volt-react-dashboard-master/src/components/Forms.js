@@ -22,7 +22,11 @@ export const GeneralInfoForm = () => {
   const handleSubmit = (event) => {
   
     event.preventDefault();
+<<<<<<< HEAD
     fetch('/data', {
+=======
+    fetch('https://cms-server-29mo.onrender.com/data', {
+>>>>>>> 52c51642dfc7851493317e94c2bae900cca0d9e1
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
