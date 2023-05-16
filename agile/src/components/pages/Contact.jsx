@@ -40,6 +40,7 @@ const Contact = () => {
       });
 
       if (!response.ok) {
+        
         throw new Error('Network response was not ok');
       }
 

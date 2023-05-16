@@ -22,7 +22,7 @@ export const GeneralInfoForm = () => {
   const handleSubmit = (event) => {
   
     event.preventDefault();
-    fetch('http://localhost:8000/data', {
+    fetch('/data', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

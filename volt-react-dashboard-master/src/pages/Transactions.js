@@ -3,17 +3,20 @@ import { Col, Row } from '@themesberg/react-bootstrap';
 
 export default () => {
   const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState("Loading messages, Please Wait!");
+
 
   useEffect(() => {
     fetch("https://cms-server-29mo.onrender.com")
       .then(response => response.json())
-      .then(data => setMessages(data))
+      .then(setLoading(""))
       .catch(error => console.error(error));
   }, []);
 
   return (
     <>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+        {loading}
         <b>MESSAGES</b>
       </div>
 
