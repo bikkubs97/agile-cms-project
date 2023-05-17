@@ -458,7 +458,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,81,155,1) 73%)
   .swiper-slide {
     width: 37rem;
     height: 42rem;
-    position: relative;
+  
+  
   }
   
   /*  btn woking ends */
@@ -486,6 +487,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,81,155,1) 73%)
 .my-img{
     object-fit : cover;
     max-width  : 100%;
+    top : 0px
   
   }
 

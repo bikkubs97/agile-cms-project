@@ -376,10 +376,10 @@ const handleNextClick = () => {
 
           effect="coverflow"
           coverflowEffect={{
-            rotate: 25,
-            stretch: -50,
-            depth: 200,
-            modifier: 1.6,
+            rotate: 30,
+            stretch: 10,
+            depth: 80,
+            modifier: 1,
             slideShadows: false
           }}
           loop={true}
@@ -418,15 +418,17 @@ const handleNextClick = () => {
             },
           }}
 
+          spaceBetween={20}
+
         >
          
           <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /></SwiperSlide>
           <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /></SwiperSlide>
-         <SwiperSlide className='slide-style'> <img className='my-img' src="https://plus.unsplash.com/premium_photo-1666625102569-d55445ecf811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" /></SwiperSlide>
+        
           <SwiperSlide className='slide-style'> <img className='my-img' src="https://plus.unsplash.com/premium_photo-1666625102452-33a2a0fc62d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" />
           </SwiperSlide>
           <SwiperSlide className='slide-style'> <img className='my-img' src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="" /></SwiperSlide>
-         
+          <SwiperSlide className='slide-style'> <img className='my-img' src="https://plus.unsplash.com/premium_photo-1666625102569-d55445ecf811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" /></SwiperSlide>
           <div className="slider-controler">
             <div onClick={handlePrevClick} className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
